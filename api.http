@@ -1,0 +1,6 @@
+POST https://api.telegram.org/bot[TOKEN]/exportChatInviteLink
+Content-Type: application/json
+
+{
+  "chat_id": -1002096271000
+}

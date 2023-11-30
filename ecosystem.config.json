@@ -1,0 +1,5 @@
+{     
+    "name": "bot-gatekeeper",     
+"script": "npm run prod",     
+"max_memory_restart": "100M" 
+}
