@@ -18,7 +18,7 @@ function notifyOwnerForApproval(bot, userId, answers) {
 export async function askNextQuestion(bot, userId) {
     const questions = [
         "What is your product's website?",
-        "Could you tell me about yourself? For example, your name, where you're from, and what you're currently focusing on in your business development.",
+        "Could you tell me about yourself? For example, provide a link to your Reddit/Linkedin profile, where you're from, and what you're currently focusing on in your business development.",
         "What is your current monthly recurring revenue? 💰"
     ];
 

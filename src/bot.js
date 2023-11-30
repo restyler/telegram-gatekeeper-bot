@@ -63,7 +63,7 @@ bot.on('message', async (msg) => {
         
 
         if (msg.text.startsWith("/start")) {
-            bot.sendMessage(userId, "Hey there! 👋 I'm the Gatekeeper Bot for the Sole Founders chat. We're crafting a tight-knit community of tech-savvy business owners, particularly those involved in bootstrapping and scaling 🚀 SaaS businesses. \n\nAt present, we're accepting product owners who already have a stream of recurring revenue (10K to 10M ARR). To join our group, could you please answer the following questions?");
+            bot.sendMessage(userId, "Hey there! 👋 I'm the Gatekeeper Bot for the Sole Founders chat. We're crafting a tight-knit community of tech-savvy business owners, particularly those involved in bootstrapping and scaling 🚀 SaaS businesses, read more at https://solefounders.club. \n\nAt present, we're accepting product owners who already have a stream of recurring revenue (10K to 10M ARR). To join our group, could you please answer the following questions? The answers will be used to create your #intro for the club members.");
 
 
             // Create a new profile for the user. Do no execute if the user already exists. insert user name, first name, last name if they exist in msg
