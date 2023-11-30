@@ -2,7 +2,15 @@
 
 This is a simple bot that surveys the visitor with three questions and saves each response to a MySQL database. The bot admin can view the survey results for each user and approve them to join the group. Approved users will receive a message with a unique invite link to the group.
 
-![Screenshot](/scrn1.png)
+## Screenshots
+1. Survey questions:
+![Survey](/scrn1.png)
+
+2. Admin decides to approve the user and clicks "Approve":
+![Introduction on join](/scrn2.png)
+
+3. Bot welcomes the member on join with his survery results so all members see who they are talking to:
+![Introduction on join](/scrn3.png)
 
 I built this bot because the standard approval workflow for Telegram groups is too simplistic. Most text variables are hardcoded; see the `./src/*` files. Pull requests are welcome!
 

@@ -12,7 +12,26 @@ async function logMessages(msg, response, isBot = false) {
     await logInteraction(msg.from.id, msg.text, response, isBot);
 }
 
-const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
+// Create a configuration object for the bot
+const botConfig = {
+    polling: true
+};
+
+const isValidUrl = (string) => {
+    try {
+        new URL(string);
+        return true;
+    } catch (_) {
+        return false;
+    }
+}
+  
+// Add proxy to the bot configuration if the environment variable is set and is a valid URL
+if (process.env.TELEGRAM_PROXY_URL && isValidUrl(process.env.TELEGRAM_PROXY_URL)) {
+    botConfig.proxy = process.env.TELEGRAM_PROXY_URL;
+}
+
+const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, botConfig);
 
 // Global exception handler for unhandled promise rejections
 process.on('unhandledRejection', (error) => {
